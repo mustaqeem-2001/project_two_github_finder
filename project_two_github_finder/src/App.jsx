@@ -10,14 +10,12 @@ export default function App() {
 // API: // From: https://api.github.com/users/mustaqeem-2001 
 
     function handleSubmit(e) {
+        setLoading(true)
         setHasSearched(true);
         e.preventDefault();
-        console.log(e);
-        console.log(username.toLowerCase())
         fetch(`https://api.github.com/users/${username}`) // GitHub API is case-insensitive
             .then(response => {
                 if (!response.ok) {
-                    setUserFound(false);
                     throw new Error("User not found");
                 }
                 return response.json()
@@ -27,7 +25,6 @@ export default function App() {
                 setUser(data)
             })
             .catch((err) => {
-                console.log(err)
                 setUser(null);
             })
             .finally(() => {
@@ -102,7 +99,7 @@ export default function App() {
 
                                     <div className="user-location">
                                         <i className="fa-solid fa-location-dot"></i>
-                                        <p>{user.location}</p>
+                                        <p>{user.location ? user.location : "Unknown"}</p>
                                     </div>
                                     <div className="view-on-github-container">
                                         <i className="fa-brands fa-github"></i>
