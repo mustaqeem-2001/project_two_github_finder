@@ -6,12 +6,11 @@ To showcase my knowledge to employers
 
 # What is practiced in here?
 
-1) useEffect
-2) fetch data from API
-3) loading state
-4) error state
-5) conditional rendering
-6) React Fundamentals from project one
+1) fetch data from API
+2) loading state
+3) error state
+4) conditional rendering
+5) React Fundamentals from project one
 
 # What is this project?
 
