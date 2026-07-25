@@ -75,7 +75,7 @@ export default function App() {
                             <main>
                                 <div className="user-info">
                                     <img className="user-avatar" src={`${user.avatar_url}`} />
-                                    <h1 className="profile-name">{user.name}</h1>
+                                    <h1 className="profile-name">{user.name ? user.name : "No name shown"}</h1>
                                     <p className="user-name">@{`${user.login}`}</p>
                                     <p className="user-bio">{`${user.bio ? user.bio : "No bio shown"}`}</p>
 
