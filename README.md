@@ -16,6 +16,10 @@ To showcase my knowledge to employers
 
 As a user, you will input a GitHub username, utilizing the GitHub API the web application will display the profile back to you, otherwise an error messagge will be shown.
 
+# Important note
+
+This is only designed for mobile users or small screened users, so make sure you are either in a mobile viewport through dev-tools or on a physical mobile device
+
 # Project setup and guide
 0) Make sure Node.js is installed
 1) Download the Project
