@@ -1,27 +1,240 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
 }
 
 h1, h2, h3, p, input {
     margin: 0;
     padding: 0;
 }
-main, header, footer, p {
-    border: 1px solid black;
-    margin: 1rem;
-    padding: 1rem;
-}
 
 header {
-    
+    padding: 2.5rem 1.6rem;
+    background-color: #0f172b;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.header-brand {
+    display: flex;
+    align-items: center;
+    gap: .6rem;   
+    color: #fff;
 }
 
 main {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto 0;
+    gap: 16px;
+}
 
+.spinner {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, #4f39f6, transparent);
+    animation: spin 1s linear infinite;
+    
+    /* Creates the ring effect */
+    -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 4px), black calc(100% - 4px));
+    mask: radial-gradient(farthest-side, transparent calc(100% - 4px), black calc(100% - 4px));
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.fa-circle-exclamation  {
+    background-color: #eeeeee;
+    font-size: 2.5rem;
+    padding: 1.5rem 2.5rem;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    color: #ff0000;
+}
+
+.initial-github-logo {
+    background-color: #eef2ff;
+    font-size: 2.5rem;
+    padding: 1.5rem 2.5rem;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    color: #9387f1;
+}
+
+.initial-main-find-github {
+    color: #364153;
+}
+
+.initial-main-text {
+    color: #99a1af;
+    font-size: .86rem;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-input-container {
+    display: flex;
+    align-items: center;
+    border-color: #314158;
+    background-color: #1d293d;
+    padding: 1rem .5rem;
+    gap: 8px;
+}
+
+.user-input {
+    width: 100%;
+    border-color: #314158;
+    background-color: #1d293d;
+    border: none;
+    color: #fff;
+}
+
+form > button {
+    padding: 1rem;
+    border-radius: 16px;
+    color: #fff;
+    background-color: #4f39f6;
+}
+
+.user-avatar {
+    width: clamp(80px, 25%, 200px);
+    border-radius: 40px;
+    margin: 0 auto;
+    display: block;
+    border: 1px solid #fff;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background-color: #eef2ff;
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    max-width: 100%;
+}
+
+.profile-name {
+    white-space: nowrap;
+    text-align: center;
+}
+
+.user-name {
+    color: #615fff;
+    text-align: center;
+}
+
+.user-public-details-container, .user-location {
+    display: flex;
+}
+
+.user-location {
+    gap: 12px;
+    color: #4a5565;
+}
+
+.user-public-details-container {
+    gap: 6px;
+    border-radius: 12px;
+    background-color: #fff;
+}
+
+.user-public-details-container > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 1rem .5rem;
+    flex: 1 1 0;
+    min-width: 0;     /* ← allow shrinking below content width */
+}
+
+.user-public-details-container > div:not(:last-child) {
+    border-right: 1px solid rgb(224, 224, 224);
+}
+
+.user-info > div > div >  i {
+    color: #4f39f6;
+} 
+
+.fsB {
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.fc {
+    color: #99a1af;
+}
+
+.user-bio {
+    font-size: .86rem;
+    text-align: center;
+}
+
+.fa-location-dot {
+    color: #929090;
 }
 
 
-/* .github-repo-link {
-    display: inline-block;
-} */
+.view-on-github-container {
+    display: flex;
+    gap: 12px;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 12px;
+    background-color: #0f172b;
+    color: #ffffff;
+    align-items: center;
+    justify-content: center;
+}
+
+.view-on-github-container > a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+footer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: auto 0 1rem;
+}
+
+footer > p {
+    color: #99a1af;
+    font-size: .9rem;
+}
+
+footer > div {
+    color: #7c86ff;
+}
+
+footer > div > a {
+    font-size: .86rem;
+    text-decoration: none;
+}
