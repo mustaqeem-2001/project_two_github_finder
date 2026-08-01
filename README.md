@@ -1,9 +1,13 @@
 # Purpose of this Project
 
 . To practice Frontend Development to strengthen my knowledge and work more efficiently.
+
 . To showcase my eagerness to learn
+
 . To showcase my knowledge to employers
+
 . To practice React + Data Fetching
+
 
 # What is practiced in here?
 
